@@ -23,7 +23,6 @@ class Magazine
 
     def mag_art
         Article.all.filter{|article| article.magazine.name == self.name}
-    end
 
     def mag_auth
         mag_art.map{|article| article.author}.uniq
