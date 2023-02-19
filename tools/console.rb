@@ -5,19 +5,36 @@ def reload
 end
 
 
-a1 = Author.new("Author1")
-mag = Magazine.new("mag1","news")
-mag2 = Magazine.new("mag2","news")
-mag3 = Magazine.new("mag3","sports")
-art = Article.new(a1,mag,"Title1")
-a2 = Author.new("Author2")
-art2 = Article.new(a2,mag,"Title2")
-a1.add_article(mag,"Title3")
-a1.add_article(mag,"Title4")
-a1.add_article(mag,"Title5")
-a1.add_article(mag2,"Title6")
-a1.add_article(mag2,"Title7")
-a1.add_article(mag3,"Title8")
+
+#creating  a new author
+author1 = Author.new("Boniface Korir")
+author2 = Author.new("Millicent J")
+author3 = Author.new("james Korir")
+author4 = Author.new("viola J")
+
+
+#Creating new magazines
+magazine1 = Magazine.new("The NAIROBIAN", "Lifestyle and Fashion")
+magazine2 = Magazine.new("Science News", "Business and Finance")
+magazine3 = Magazine.new("National Geographic Traveler", "Travel and Food")
+magazine4 = Magazine.new("Entertainment Weekly", "Arts and Entertainment")
+
+
+
+
+#creating new articles instances
+article1 = Article.new(author1,magazine1,"The Vogue")
+article2 = Article.new(author2,magazine2,"The Forbes")
+article3 = Article.new(author3,magazine3,"The National Geographic Traveler")
+article4 = Article.new(author4,magazine4,"The Entertainment Weekly")
+
+
+#adding new article
+author1.add_article(magazine1,"The Vogue")
+author2.add_article(magazine3,"The Entertainment Weekly")
+author4.add_article(magazine4,"The National Geographic Traveler")
+author3.add_article(magazine2,"The Forbes")
+
 
 
 binding.pry
